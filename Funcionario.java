@@ -1,8 +1,18 @@
 public class Funcionario extends Pessoa {
-    public Funcionario(String nome, String endereco, int idade) {
-        super(nome, idade, endereco );
+    private double salario;
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+    public double getSalario() {
+        return salario;
     }
 
-    public Funcionario() {
+    public Funcionario(String nome, int idade, String endereco, double salario){
+        super(nome, idade, endereco);
+        setSalario(salario);
     }
+    public Funcionario(){
+
+    }
+    
 }
