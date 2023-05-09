@@ -1,19 +1,24 @@
 public class Professor extends Funcionario {
-   private String disciplina;
+    private String diciplina;
 
-   public void setDisciplina(String disciplina) {
-       this.disciplina = disciplina;
-   }
-   public String getDisciplina() {
-       return disciplina;
-   }
+    public void setDiciplina(String diciplina) {
+        this.diciplina = diciplina;
+    }
 
-   public Professor(String nome, int idade, String endereco, double salario, String disciplina){
-       super(nome, idade, endereco, salario);
-       setDisciplina(disciplina);
-   }
-   public Professor(){
+    public String getDiciplina() {
+        return diciplina;
+    }
 
-   }
-   
+    public Professor(String nome, int idade, String endereco, double salario, String diciplina){
+        super(nome, idade, endereco, salario);
+        this.diciplina = diciplina;
+    }
+
+    public void dados() {
+        System.out.println("Nome do professor: " + getNome());
+        System.out.println("Idade do professor: " + getIdade());
+        System.out.println("Matéria lecionada pelo professor: " + getDiciplina());
+        System.out.println("Salário do professor: R$" + getSalario());
+        System.out.println("Endereço do professor: " + getEndereco() + "\n");
+    }
 }
